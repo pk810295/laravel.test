@@ -6,7 +6,23 @@
 			<p>Author Details:</p>
 			<img src="{{Voyager::image($user->avatar)}}" class="rounded-circle" height="100px" width="100px">
 			<h3>{{$user->name}}</h3>
-			<p>Followers:</p><a href="">Follow</a>
+			<p>Followers:</p><a href="" onclick="">Follow</a>
+			<div class="to-follow col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+		    <button id="follow" class="btn btn-primary btn-block" data-toggle="button">Follow</button>
+		    <button id="unfollow" class=" hidden btn btn-danger btn-block hidden">Unfollow</button>
+		    <style type="text/css">
+		    	.hidden {
+				    display: none;
+				}
+		    </style>
+		    <script type="text/javascript">
+		    	$("#follow, #unfollow").click(function () {
+    			$("#follow, #unfollow").toggleClass('hidden');
+				});
+		    </script>
+		   
+
+</div>
 		</div>
 		<div class="col-sm-8">
 			<table class="table table-striped">

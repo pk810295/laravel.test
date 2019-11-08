@@ -23,7 +23,7 @@ Route::group(['prefix' => 'admin'], function () {
   //  return view('welcome');
 //});
 Route::get('/',function(){
-	$posts=App\Post::all();
+	$posts = App\Post::orderBy('created_at', 'desc')->paginate(2);
 	return view('index',compact('posts'));
 });
 
@@ -33,14 +33,10 @@ Route::get('/post/{slug}',function($slug){
 	return view('post',compact('post','user'));
 });
 
+
 Route::get('/{slug}', function($slug)
 	{
 	$page=App\Page::where('slug','=',$slug)->firstOrFail();
 		return view('page',compact('page'));
 	});
-
-
-
-
-
 

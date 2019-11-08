@@ -1,11 +1,4 @@
 
-}
-.bgimg{
-	background-image:url('../image/11.jpg');
-	background-size: 100% 100%;
-    width: 100%;
-	height: 300px;
-}
 .card-body{
 	padding: 0.5rem;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -103,6 +96,18 @@
 	border: 2px solid green;
 	height: 400px;
 }
+.grid-collection{
+	padding: 100px 0px 60px;
+	height: 1500px;
+	border: 2px solid red
+}
+.secimg img{
+	background-size: 100% 100%;
+	height: 200%;
+	width: 100%;
+	border: 2px solid black;
+}
+.secimg
 
 .footer{
 	height: 100px;
