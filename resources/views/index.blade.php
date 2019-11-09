@@ -17,7 +17,7 @@
             <div class="col-md-8">
               <div class="card-body border-white">
                 <h5 class="card-title">{!!$post->title!!}</h5>
-                <p class="card-text">{{$post->author}}</p>
+                <p class="card-text">{{$post->author_}}</p>
                 <p class="card-text"><small class="text-muted">Last updated  {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</small></p>
               </div>
             </div>
