@@ -27,10 +27,11 @@ Route::get('/','IndexController@index');
 Route::get('/post/{slug}','PostController@index');
 	
 
-Route::get('/{slug}', function($slug)
-	{
-	$post=App\Post::where('slug','=',$slug)->firstOrFail();
-		return view('post',compact('post'));
-
+Route::get('/category/{slug}', function($slug)
+	{	
+		$category=App\Category::where('slug','=',$slug)->firstOrFail();
+		$posts=$category->posts()->orderBy('created_at','desc')->simplePaginate(50);
+		$popular=$posts=$category->posts()->orderBy('views','desc')->simplePaginate(50);
+		return view('category',compact('category','posts','popular'));
 	});
-Route::view('/page/good-news','good-news');
+

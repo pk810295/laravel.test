@@ -4,7 +4,7 @@
 
     
 <!-- --- -----  -------- latest posts ----- --- ------ -->
-                  
+                
 <section class="container fourth"> 
   <h2>Latest</h2>
   <div class="row">
@@ -69,7 +69,7 @@
             </a>
             <div class="row">
               <div class="col-sm-3">
-                <img src="{{Voyager::image($post->author->avatar)}}" style="border-radius: 50%;width: 50px;height: 50px">
+                <img src="{{Voyager::image($gn->author->avatar)}}" style="border-radius: 50%;width: 50px;height: 50px">
               </div>
               <div class="col-sm-12">
                 <small>{{$gn->author->name}}</small><br>
@@ -94,7 +94,7 @@
     
         <div class="col-lg-3 col-md-3 col-sm-12 col-12 d-block m-auto">
           <div class="card border-white" style="width: 16rem;">
-            <img src="{{Voyager::image($gn->image)}}" class="card-img-top" alt="..." >
+            <img src="{{Voyager::image($fact->image)}}" class="card-img-top" alt="..." >
             <div class="card-body">
             <a href="/post/{{$gn->slug}}" class="text-decoration-none text-dark">
               <h5 class="card-title">{!!Str::limit($fact->title,80)!!}</h5>

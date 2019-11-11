@@ -17,7 +17,7 @@ class IndexController extends Controller
                ->orderBy('created_at', 'desc')
                ->paginate(4);
         $popular=App\Post::orderBy('views','desc')->simplePaginate(10);
-        
+      	
     	return view('index',compact('posts','gnews','facts','popular'));
     }
    

@@ -8,12 +8,12 @@
           <div class="collapse navbar-collapse text-center" id="collapsenavbar">
             <ul class="navbar-nav m-auto justify-content-center">
               <div class="dropdown"><li class="nav-item1">
-                <a href="/page/good-news" class="nav-link text-dark">Good News</a><div class="dropdown-content"><img src="/image/diwali.jpg" alt="Cinque Terre" width="300" height="200">
+                <a href="/category/good-news" class="nav-link text-dark">Good News</a><div class="dropdown-content"><img src="/image/diwali.jpg" alt="Cinque Terre" width="300" height="200">
         <div class="desc">Beautiful Cinque Terre</div>
         </div>
                     </li></div>
                     <div class="dropdown"><li class="nav-item1">
-                      <a href="/page/fact-check" class="nav-link text-dark">Fact check</a><div class="dropdown-content"><img src="/image/factcheck.jpg" alt="Cinque Terre" width="300" height="200">
+                      <a href="/category/fact-check" class="nav-link text-dark">Fact check</a><div class="dropdown-content"><img src="/image/factcheck.jpg" alt="Cinque Terre" width="300" height="200">
         <div class="desc">Beautiful Cinque Terre</div>
         </div>
                     </li></div>
@@ -23,32 +23,32 @@
         </div>
                     </li></div>
                     <div class="dropdown"><li class="nav-item1">
-                      <a href="/page/social" class="nav-link text-dark">Social</a><div class="dropdown-content"><img src="/image/social.jpg" alt="Cinque Terre" width="300" height="200">
+                      <a href="/category/social" class="nav-link text-dark">Social</a><div class="dropdown-content"><img src="/image/social.jpg" alt="Cinque Terre" width="300" height="200">
         <div class="desc">Beautiful Cinque Terre</div>
         </div>
                     </li></div>
                     <div class="dropdown"><li class="nav-item1">
-                      <a href="/page/scientific" class="nav-link text-dark">Scientific</a><div class="dropdown-content"><img src="/image/scientific.jpg" alt="Cinque Terre" width="300" height="200">
+                      <a href="/category/scientific" class="nav-link text-dark">Scientific</a><div class="dropdown-content"><img src="/image/scientific.jpg" alt="Cinque Terre" width="300" height="200">
         <div class="desc">Beautiful Cinque Terre</div>
         </div>
                     </li></div>
                     <div class="dropdown"><li class="nav-item1">
-                      <a href="/page/artistic" class="nav-link text-dark">Artistic</a><div class="dropdown-content"><img src="/image/artistic.jpg" alt="Cinque Terre" width="300" height="200">
+                      <a href="/category/artistic" class="nav-link text-dark">Artistic</a><div class="dropdown-content"><img src="/image/artistic.jpg" alt="Cinque Terre" width="300" height="200">
         <div class="desc">Beautiful Cinque Terre</div>
         </div>
                     </li></div>
                     <div class="dropdown"><li class="nav-item1">
-                      <a href="/page/literature" class="nav-link text-dark">Literature</a><div class="dropdown-content"><img src="/image/literature.jpg" alt="Cinque Terre" width="300" height="200">
+                      <a href="/category/literature" class="nav-link text-dark">Literature</a><div class="dropdown-content"><img src="/image/literature.jpg" alt="Cinque Terre" width="300" height="200">
         <div class="desc">Beautiful Cinque Terre</div>
         </div>
                     </li></div>
                     <div class="dropdown"><li class="nav-item1">
-                      <a href="/page/green" class="nav-link text-dark">Green</a><div class="dropdown-content"><img src="/image/green.jpg" alt="Cinque Terre" width="300" height="200">
+                      <a href="/category/green" class="nav-link text-dark">Green</a><div class="dropdown-content"><img src="/image/green.jpg" alt="Cinque Terre" width="300" height="200">
         <div class="desc">Beautiful Cinque Terre</div>
         </div>
                     </li></div>
                     <div class="dropdown"><li class="nav-item1">
-                      <a href="/page/politics" class="nav-link text-dark">Politics</a><div class="dropdown-content"><img src="/image/politics.png" alt="Cinque Terre" width="300" height="200">
+                      <a href="/category/politics" class="nav-link text-dark">Politics</a><div class="dropdown-content"><img src="/image/politics.png" alt="Cinque Terre" width="300" height="200">
         <div class="desc">Beautiful Cinque Terre</div>
         </div>
                     </li></div>
