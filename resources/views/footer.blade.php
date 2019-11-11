@@ -1,5 +1,5 @@
 
-<section class="footer" style="margin-top: 50px; background-image: url('image/darkblue.jpg');">
+<section class="footer" style="margin-top: 50px; background-image: url('/image/darkblue.jpg');">
 
 
 

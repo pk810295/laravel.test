@@ -2,13 +2,15 @@
 @section('content')
 @include('nav')
 
-
+    
 <!-- --- -----  -------- latest posts ----- --- ------ -->
+                  
 <section class="container fourth"> 
   <h2>Latest</h2>
   <div class="row">
     <div class="col-lg-9 col-md-3 col-sm-3 col-12 d-block m-auto">
       @foreach ($posts as $post)
+
         <div class="card mb-3 border-white">
           <div class="row no-gutters">
             <div class="col-md-4">
@@ -16,9 +18,19 @@
             </div>
             <div class="col-md-8">
               <div class="card-body border-white">
-                <h5 class="card-title">{!!$post->title!!}</h5>
-                <p class="card-text">{{$post->author_}}</p>
-                <p class="card-text"><small class="text-muted">Last updated  {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</small></p>
+                <h5><a href="/post/{{$post->slug}}">{!!$post->title!!}</a></h5>
+                <div class="row mt-3">
+                  <div class="col-sm-2">
+                    <img src="{{Voyager::image($post->author->avatar)}}" style="border-radius: 50%;width: 50px;height: 50px">
+                  </div>
+                  <div class="col-md-4">
+                    <p><a href="#"class="card-text "><small class="text-muted">{{$post->author->name}}</a> <br> 
+                      {{$post->views}} Views |
+                      {{ \Carbon\Carbon::parse($post->created_at)->toFormattedDateString()}}</small></p>
+                  
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -29,16 +41,12 @@
         <div class="card border-white" style="height: 43rem;">
           <div class="card-header border-white">Popular</div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
+              @foreach ($popular as $popular)
+              <li class="list-group-item">
+                <a  href="/post/{{$popular->slug}}">{!!Str::limit($popular->title,40)!!}
+                </a>
+              </li>
+              @endforeach
             </ul>
         </div>
       </div>
@@ -51,13 +59,55 @@
   <div class="container"><h2>Good News</h2>
     <div class="row">
       @foreach ($gnews as $gn)
+    
         <div class="col-lg-3 col-md-3 col-sm-12 col-12 d-block m-auto">
           <div class="card border-white" style="width: 16rem;">
             <img src="{{Voyager::image($gn->image)}}" class="card-img-top" alt="..." >
             <div class="card-body">
-            <a href="#" class="text-decoration-none text-dark">
+            <a href="/post/{{$gn->slug}}" class="text-decoration-none text-dark">
               <h5 class="card-title">{!!Str::limit($gn->title,80)!!}</h5>
             </a>
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="{{Voyager::image($post->author->avatar)}}" style="border-radius: 50%;width: 50px;height: 50px">
+              </div>
+              <div class="col-sm-12">
+                <small>{{$gn->author->name}}</small><br>
+                <small>{{$gn->views}} Views | {{\Carbon\Carbon::parse($gn->created_at)->diffForHumans()}} </small>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      @endforeach
+    </div>
+  </div>
+  <hr style="border-top-color: #C0C0C0;">
+</section>
+
+
+<!-- fact check -->
+<section class="Good news">
+  <div class="container"><h2>Fact Check</h2>
+    <div class="row">
+      @foreach ($facts as $fact)
+    
+        <div class="col-lg-3 col-md-3 col-sm-12 col-12 d-block m-auto">
+          <div class="card border-white" style="width: 16rem;">
+            <img src="{{Voyager::image($gn->image)}}" class="card-img-top" alt="..." >
+            <div class="card-body">
+            <a href="/post/{{$gn->slug}}" class="text-decoration-none text-dark">
+              <h5 class="card-title">{!!Str::limit($fact->title,80)!!}</h5>
+            </a>
+            <div class="row">
+              <div class="col-sm-3">
+                <img src="{{Voyager::image($fact->author->avatar)}}" style="border-radius: 50%;width: 50px;height: 50px">
+              </div>
+              <div class="col-sm-12">
+                <small>{{$fact->author->name}}</small><br>
+                <small>{{$fact->views}} Views | {{\Carbon\Carbon::parse($fact->created_at)->diffForHumans()}} </small>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -138,25 +188,8 @@
 <!-- arrow key --->
 
 <!-- fact check section ---->
-<section class="Fact check" style="margin-top: 30px;">
-  <div class="container"><h2>Fact Check</h2>
-    <div class="row" style="margin-top: 20px;">
-      @foreach ($facts as $fact)
-        <div class="col-lg-3 col-md-3 col-sm-12 col-12 d-block m-auto">
-          <div class="card border-white" style="width: 16rem;">
-            <img src="{{Voyager::image($fact->image)}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <a href="#" class="text-decoration-none text-dark"><h5>{!!Str::limit($fact->title,70)!!}</h5></a>
-            </div>
-          </div>
-        </div>
-          @endforeach
-      </div>
-  </div>
-  <hr style="border-top-color: #C0C0C0;">
-</section>
+
   
-@include('footer')
 
 <script>
   $(document).ready(function(){

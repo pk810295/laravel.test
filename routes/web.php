@@ -22,18 +22,15 @@ Route::group(['prefix' => 'admin'], function () {
 //Route::get('/', function () {
   //  return view('welcome');
 //});
-Route::get('/','postController@index');
+Route::get('/','IndexController@index');
 
-Route::get('/post/{slug}',function($slug){
-	$post=App\Post::where('slug','=',$slug)->firstOrFail();
-	$user=App\User::where('id','=',$post->author_id)->firstOrFail();
-	return view('post',compact('post','user'));
-});
-
+Route::get('/post/{slug}','PostController@index');
+	
 
 Route::get('/{slug}', function($slug)
 	{
-	$page=App\Category::where('slug','=',$slug)->firstOrFail();
-		return view($slug,compact('page'));
+	$post=App\Post::where('slug','=',$slug)->firstOrFail();
+		return view('post',compact('post'));
+
 	});
 Route::view('/page/good-news','good-news');
